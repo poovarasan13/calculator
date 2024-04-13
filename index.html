@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+ 
+    <title>calculator</title>
+    <script >
+    function Solve(val) {
+  var v = document.getElementById("result");
+  v.value += val;
+}
+function Result() {
+  var num1 = document.getElementById("result").value;
+  var num2 = eval(num1);
+  document.getElementById("result").value = num2;
+}
+function Clear() {
+  var inp = document.getElementById("result");
+  inp.value = "";
+}
+function Back() {
+  var v = document.getElementById("result");
+  v.value = v.value.slice(0, -1);
+}
+
+     </script>
+     <style>* {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        display: grid;
+        height: 100vh;
+        place-items: center;
+      }
+      .div1 {
+        width: 350px;
+        height: 450px;
+        position: absolute;
+        border: 30px solid rgb(175, 172, 172);
+        border-radius: 10px;
+      }
+      .div1 input[type="text"] {
+        width: 300px;
+        position: relative;
+        height: 70px;
+        top: 15px;
+        text-align: right;
+        padding: 3px 6px;
+        outline: none;
+        font-size: 40px;
+        border: 1px solid #e1e9e9;
+        display: flex;
+        margin: auto;
+        border-radius: 6px;
+        color: black;
+      }
+      .div3 {
+        background-color: snow;
+        border-radius: 6px;
+        height: 450px;
+      }
+      .div2 input[type="button"] {
+        width: 75px;
+        padding: 2px;
+        margin: 4px 2px;
+        position: relative;
+        left: 13px;
+        top: 20px;
+        height: 60px;
+        cursor: pointer;
+        font-size: 25px;
+        transition: 0.5s;
+        background-color: #e1e9e9;
+        border-radius: 6px;
+        border: 1px solid #e1e9e9;
+        color: black;
+      }
+      .div2 input[type="button"]:hover {
+        background-color: rgb(212, 208, 208);
+        color: red;
+      }
+      .div2 input[type="button"]:active {
+        color: darkgreen;
+        background-color: greenyellow;
+      }
+      </style>
+  </head>
+  <body>
+      
+          <div class="div1">
+            <div class="div3">
+             <input type="text" id = 'result'>
+             <div class="div2">
+                <input type="button"  value = 'AC' onclick = "Clear()" style="color:lightskyblue">
+                <input type="button" value = 'DEL' onclick = "Back()"  style="color:lightskyblue">
+                <input type="button" value = '%' onclick ="Solve('%')" style="color:lightskyblue">
+                <input type="button" value = '/' onclick = "Solve('/')" style="color:lightskyblue">
+                <br>
+                <input type="button" value = '7' onclick = "Solve('7')">
+                <input type="button" value = '8' onclick = "Solve('8')">
+                <input type="button" value = '9' onclick = "Solve('9')">
+                <input type="button"  value = '*' onclick = "Solve('*')" style="color:lightskyblue">
+                <br>
+                <input type="button" value = '4' onclick = "Solve('4')">
+                <input type="button" value = '5' onclick = "Solve('5')">
+                <input type="button" value = '6' onclick = "Solve('6')">
+                <input type="button" value = '-' onclick = "Solve('-')" style="color:lightskyblue">
+                <br>
+                <input type="button" value = '1' onclick = "Solve('1')">
+                <input type="button" value = '2' onclick = "Solve('2')">
+                <input type="button" value = '3' onclick = "Solve('3')">
+                <input type="button" value = '+' onclick = "Solve('+')" style="color:lightskyblue">
+                <br>
+                <input type="button" value = '0'onclick = "Solve('0')">
+                <input type="button" value = '00' onclick = "Solve('00')">
+                <input type="button" value = '.' onclick = "Solve('.')">
+                <input type="button" value = '=' onclick = "Result()" style="color:lightskyblue">
+             </div>
+            </div>
+          </div
+  </body>
+     
+</html>
